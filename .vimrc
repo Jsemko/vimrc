@@ -27,7 +27,7 @@ Plugin 'Lokaltog/vim-powerline'
 "Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 
-let @q='iOA"""OCCopyright 2016KnuEdge Inc.All rights reserved."""OC'
+let @q='iOA"""OCCopyright 2017KnuEdge Inc.All rights reserved."""OC'
 let @m='idef main():parser = argparse.ArgumentParser()parser.add_argument('
 let @i='iimport numpy as npimport argparse'
 
