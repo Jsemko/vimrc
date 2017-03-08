@@ -30,8 +30,9 @@ Plugin 'airblade/vim-gitgutter'
 let @q='iOA"""OCCopyright 2017KnuEdge Inc.All rights reserved."""OC'
 let @m='idef main():parser = argparse.ArgumentParser()parser.add_argument('
 let @i='iimport numpy as npimport argparse'
+let @p="@d^vExi print('pli = {akeyf'li.format(akeyli=p@d"
+let @d='$BEa Dj'
 
-"
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
