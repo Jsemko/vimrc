@@ -12,7 +12,7 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -51,6 +51,11 @@ let @d='$BEa Dj'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 "
 " " All of your Plugins must be added before the following line
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_w = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -69,6 +74,8 @@ filetype plugin indent on    " required
 
 nnoremap <C-m> :NERDTreeToggle<CR>
 let mapleader = ","
+
+"let g:syntastic_always_populate_loc_list = 1
 
 filetype plugin indent on
 set tabstop=2
@@ -203,6 +210,8 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+:nnoremap <Leader>E :SyntasticCheck<CR>
+:nnoremap <Leader>e :SyntasticReset<CR>
 :nnoremap <Leader>c :set colorcolumn=<CR>
 :nnoremap <Leader>C :set colorcolumn=80<CR>
 :nnoremap <Leader>P :set paste<CR>
