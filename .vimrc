@@ -210,13 +210,15 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+
+:nnoremap <Leader>S :setlocal spell spelllang=en_us<CR>
+:nnoremap <Leader>s :set nospell<CR>
 :nnoremap <Leader>E :SyntasticCheck<CR>
 :nnoremap <Leader>e :SyntasticReset<CR>
 :nnoremap <Leader>c :set colorcolumn=<CR>
 :nnoremap <Leader>C :set colorcolumn=80<CR>
 :nnoremap <Leader>P :set paste<CR>
 :nnoremap <Leader>p :set nopaste<CR>
-:nnoremap <Leader>s :sp\|Ggrep <C-R><C-W><CR>
 :nnoremap <Leader>g :sp\|Ggrep<Space>
 :vnoremap <Leader>v "jy:tab\|Ggrep "<C-R>j"<CR>
 :nnoremap <Leader>b :Gblame<CR>
