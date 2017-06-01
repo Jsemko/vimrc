@@ -93,6 +93,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 set splitbelow
 
 autocmd FileType python setl tabstop=4|setl shiftwidth=4|setl softtabstop=4
+autocmd FileType cpp setl tabstop=4|setl shiftwidth=4|setl softtabstop=4
 autocmd FileType html setl tabstop=2|setl shiftwidth=2|setl softtabstop=2
 autocmd FileType javascript setl tabstop=2|setl shiftwidth=2|setl softtabstop=2
 autocmd FileType css setl tabstop=2|setl shiftwidth=2|setl softtabstop=2
