@@ -10,6 +10,8 @@ call vundle#begin()
 " "call vundle#begin('~/some/path/here')
 "
 " " let Vundle manage Vundle, required
+Plugin 'dansomething/vim-eclim'
+Plugin 'motus/pig.vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
@@ -20,14 +22,14 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'valloric/youcompleteme'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'valloric/youcompleteme'
 "Plugin 'hynek/vim-python-pep8-indent'
 "Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 
-let @q='iOA"""OCCopyright 2017KnuEdge Inc.All rights reserved."""OC'
+let @q='iOA"""OCCopyright 2017Amobee Inc.All rights reserved."""OC'
 let @m='idef main():parser = argparse.ArgumentParser()parser.add_argument('
 let @i='iimport numpy as npimport argparse'
 let @p="@dk^vExi print('pli = {akeyf'li.format(akeyli=p@d"
@@ -56,6 +58,9 @@ let @d='$BEa Dj'
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_check_on_w = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"let g:ycm_filetype_whitelist = { 'python': 1 }
+let g:ycm_filetype_blacklist = { 'java': 1 }
+let g:ycm_autoclose_preview_window_after_completion = 1
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
@@ -89,13 +94,13 @@ set laststatus=2
 "set foldmethod=indent  "Code folding
 "set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
-let g:ycm_autoclose_preview_window_after_completion = 1
 set splitbelow
 
 autocmd FileType python setl tabstop=4|setl shiftwidth=4|setl softtabstop=4
 autocmd FileType cpp setl tabstop=4|setl shiftwidth=4|setl softtabstop=4
 autocmd FileType html setl tabstop=2|setl shiftwidth=2|setl softtabstop=2
 autocmd FileType javascript setl tabstop=2|setl shiftwidth=2|setl softtabstop=2
+autocmd FileType java setl tabstop=2|setl shiftwidth=2|setl softtabstop=2|setl noexpandtab
 autocmd FileType css setl tabstop=2|setl shiftwidth=2|setl softtabstop=2
 autocmd Filetype ruby setlocal tabstop=2|setl shiftwidth=2|setl softtabstop=2"
 
